@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Шуточный макет Бо Джек</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="main_block">
+        <div class="container">
+            <div class="main_block_image">
+                <img src="icons/Bo_Jack.png" alt="">
+            </div>
+            <div class="main_block_title"> Бо Джек</div>
+            <div class="main_block_subtitle">Full-stack developer based in Kamiennaja Horka, Minsk</div>
+            <div><button data-modal>Связаться</button></div>
+        </div>
+    </div>
+    <div class="expectations_from_internship">
+        <div class="container">
+            <div class="expectations_from_internship_subtitle"><h1>Ожидание от стажировки</h1></div>
+            <div class="expectations_from_internship_points">
+                <div class="expectations_from_internship_points point">
+                    <h2>Получение опыта</h2>
+                    <p>Разработка современных, удобных сервисов.Изучение новых технологий и использование их на практике  </p>
+                </div>
+                <div class="expectations_from_internship_points point">
+                    <h2>Работа в команде</h2>
+                    <p>Одному работать скучно, хочу движухи, общения, обмена опытом.  </p>
+                </div>
+                <div class="expectations_from_internship_points point">
+                    <h2>Трудоустройство</h2>
+                    <p>Само собой хочу уже работать, сколько можно учиться! Хотя учиться всё равно нужно всегда, иначе от мира отстану) </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio">
+        <div class="container">
+            <div class="portfolio_title">Мои работы</div>
+            <div class="portfolio_subtitle">Собраны избранные реально работающие проекты</div>
+            <div class="portfolio_cards">
+                <div class="portfolio_cards_card">
+                    <h2>Про Корги</h2>
+                    <div class="link"><a href="https://vseocorgi.ru/">vseocorgi.ru/</a></div>
+                    <img src="icons/img_1.png" alt="">
+                    <p>Вельш-корги – это невысокая собачка с удлиненным телом и прямостоячими большими ушами. По своей внешности представители этой породы весьма похожи на лису. Этот образ удачно подчеркивают круглые темные глаза с характерным черным ободком.</p>
+                </div>
+                <div class="portfolio_cards_card">
+                    <h2>Кулинарная школа</h2>
+                    <div class="link"><a href="https://svchschool.com">svchschool.com</a></div>
+                    <img src="icons/img_2.png" alt="">
+                    <p>СВЧ - это профессиональная школа для тех, кто хочет построить карьеру в ресторанном бизнесе или научиться готовить для себя.</p>
+                </div>
+                <div class="portfolio_cards_card">
+                    <h2>Грумминг салон</h2>
+                    <div class="link"><a href="https://groom.salon/ru">groom.salon</a></div>
+                    <img src="icons/img_3.png" alt="">
+                    <p>Сеть зоосалонов GROOM – лидер индустрии груминга в России. Наша история началась с 7 июня 2011 года с креативной и профессиональной команды профессионалов во главе с Дарьей Гоц в Екатеринбурге. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+        <div class="footer_title">Контактная информация</div>
+        <div class="footer_social">
+            <img src="icons/facebook.png" alt="Facebook">
+            <img src="icons/twitter.png" alt="Twitter">
+            <img src="icons/telegram.png" alt="Telegram">
+        </div>
+        <div class="footer_text">Я открыт для новых проектов. Вы можете прислать мне для оценки примерное техническое задание или просто описание проекта своими словами.</div>
+        <div class="footer_form">
+            <div class="footer_form_row">
+                <input id="name" placeholder="Как вас зовут?" name="name">
+                <input id="email" placeholder='Почтовый ящик' name="email">
+                </div>
+            <textarea id="message" placeholder='Сообщение'></textarea>
+            <button class="attach" type="file">Прикрепить ТЗ</button>
+            <button class="send" type="submit" id="send_modal">Отправить</button>
+            </div>
+        </div>
+    </footer>
+    <div class="overlay">
+    <div class="modal hide" id="contact">
+    <div class="modal__dialog">
+            <form action="#">
+                <div data-close-contact class="modal__close">X</div>
+                <div class="modal__title">Оставьте свои контактные данные и я с Вами обязательно свяжусь!</div>
+                <input required placeholder="Ваше имя" name="name" type="text" class="modal__input">
+                <input required placeholder="Ваш номер телефона +7(***)***-**-**" name="phone" type="phone" class="modal__input" id="modal__input">
+                <button class="btn btn_dark btn_min">Перезвонить мне</button>
+            </form>
+        </div>
+    </div>
+    <div class="modal hide" id="project">
+        <div class="modal__dialog">
+            <form action="#">
+                <div data-close-project class="modal__close">X</div>
+                <h2>Ваш проект отправлен! Свяжусь с Вами в течение 48 часов.</h2>
+            </form>
+         </div>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
