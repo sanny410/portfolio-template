@@ -16,7 +16,7 @@
             </div>
             <div class="main_block_title"> Бо Джек</div>
             <div class="main_block_subtitle">Full-stack developer based in Kamiennaja Horka, Minsk</div>
-            <div><button data-modal>Связаться</button></div>
+            <button data-id="modal_contact" class="btn">Связаться</button>
         </div>
     </div>
     <div class="expectations_from_internship">
@@ -80,15 +80,14 @@
                 </div>
             <textarea id="message" placeholder='Сообщение'></textarea>
             <button class="attach" type="file">Прикрепить ТЗ</button>
-            <button class="send" type="submit" id="send_modal">Отправить</button>
+            <button class="btn" type="submit" data-id="modal_project">Отправить</button>
             </div>
         </div>
     </footer>
-    <div class="overlay">
-    <div class="modal hide" id="contact">
+    <div class="modal" id="modal_contact">
     <div class="modal__dialog">
             <form action="#">
-                <div data-close-contact class="modal__close">X</div>
+                <div class="close">X</div>
                 <div class="modal__title">Оставьте свои контактные данные и я с Вами обязательно свяжусь!</div>
                 <input required placeholder="Ваше имя" name="name" type="text" class="modal__input">
                 <input required placeholder="Ваш номер телефона +7(***)***-**-**" name="phone" type="phone" class="modal__input" id="modal__input">
@@ -96,15 +95,14 @@
             </form>
         </div>
     </div>
-    <div class="modal hide" id="project">
+    <div class="modal" id="modal_project">
         <div class="modal__dialog">
             <form action="#">
-                <div data-close-project class="modal__close">X</div>
+                <div class="close">X</div>
                 <h2>Ваш проект отправлен! Свяжусь с Вами в течение 48 часов.</h2>
             </form>
          </div>
         </div>
-    </div>
 </div>
 <script src="script.js"></script>
 </body>

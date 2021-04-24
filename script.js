@@ -1,42 +1,18 @@
-const   modalWindowContact = document.querySelector('#contact'),
-        modalCloseContact = document.querySelector('[data-close-contact]'),
-        modalTriggerContact = document.querySelector('[data-modal]'),
-        modalCloseArea = document.querySelector('.modal__dialog'),
-        modalCloseProject = document.querySelector('[data-close-project]')
-        modalWindowProject = document.querySelector('#project'),
-        modalTriggerProject = document.querySelector('#send_modal');
+document.addEventListener('DOMContentLoaded',() => {
+let     modalClose = document.getElementsByClassName('close'),
+        modalOpen = document.getElementsByClassName('btn');
 
-        function openModal (id) {
-            id.classList.add('show');
-            id.classList.remove('hide');
-            document.body.style.overflow = 'hidden';
-        }
+        Array.from(modalClose, closeBtn => {
+            closeBtn.addEventListener('click', (e) => {
+                e.target.parentNode.parentNode.parentNode.style.visibility = 'hidden';
+                });
+            });
 
-            modalClose.addEventListener('click', ()=> closeModal());
-
-        function closeModal () {
-            modal.classList.add('hide');
-            modal.classList.remove('show');
-            document.body.style.overflow = '';
-        }
-
-        modalTriggerContact.addEventListener('click',() => openModal(modalWindowContact));
-        modalTriggerProject.addEventListener('click', () => openModal(modalWindowProject));
-
-
-        modalClose.addEventListener('click', () => closeModal());
-
-        modalCloseArea.addEventListener('click', (e) => {
-            if (e.target === modalCloseArea) {
-                closeModal();
-            }
+        Array.from(modalOpen, openBtn => {
+            openBtn.addEventListener('click', (e) => {
+                let modalId = e.target.getAttribute('data-id');
+                document.getElementById(modalId).style.visibility = 'visible';
+            });
         });
 
-        document.addEventListener('keydown', (e) => {
-        if (e.code === 'Escape' && modalWindowContact.classList.contains('show')) {
-            closeModal();
-        }
-         });
-
-        openModal();
-        closeModal();
+});
